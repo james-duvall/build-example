@@ -1,0 +1,20 @@
+[project]
+name = "build-example"
+version = "0.1.0"
+description = "Minimal working example of 'recursive' build requirement."
+readme = "README.md"
+authors = [
+    { name = "James Duvall", email = "20895143+james-duvall@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = ["data.txt"]
+artifacts = ["data.pklz"]
+
+#[tool.hatch.build.targets.wheel.hooks.custom]
